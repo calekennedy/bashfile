@@ -309,6 +309,7 @@ export ATOM_PATH="/Applications"
 ### Default node.js environment
 export NODE_ENV="development"
 
+export NPM_TOKEN=$(echo -n `cat $HOME/.npmrc | grep _authToken | cut -d= -f2`)
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
