@@ -12,6 +12,7 @@
 #  7.   System Operations & Information
 #  8.   Web Development
 #  9.   Reminders & Notes
+# 10.   Additional Additions Added Additionally
 #
 #  ---------------------------------------------------------------------------
 
@@ -310,6 +311,10 @@ export PATH=/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sb
 
 export PATH=/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/bin/:/usr/local/mysql/bin:/usr/local/mysql/bin
 
+#   -------------------------------
+#   10.  Additional Stuff
+#   -------------------------------
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -319,14 +324,16 @@ export ATOM_PATH="/Applications"
 ### Default node.js environment
 export NODE_ENV="development"
 
+### Allows npm authentication
 export NPM_TOKEN=$(echo -n `cat $HOME/.npmrc | grep _authToken | cut -d= -f2`)
 
+###
 export NVM_DIR=~/.nvm
   . $(brew --prefix nvm)/nvm.sh
 
-### You can get this here
+### Allows git [tab] [tab] autocomplete behavior
 ### $ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-### http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
+### Reference Url: http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
