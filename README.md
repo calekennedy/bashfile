@@ -20,4 +20,6 @@ Lots of credit to natelandau
 
 http://natelandau.com/my-mac-osx-bash_profile/
 
+https://gist.github.com/natelandau/10654137
+
 ---
