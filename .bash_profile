@@ -44,7 +44,8 @@
 #   from http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
 #   ------------------------------------------------------------
     export CLICOLOR=1
-    export LSCOLORS=ExFxBxDxCxegedabagacad
+    #export LSCOLORS=ExFxBxDxCxegedabagacad #(Light Themes)
+    export LSCOLORS=GxFxCxDxBxegedabagaced #(Dark Themes)
 
 
 #   -----------------------------
