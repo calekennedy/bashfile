@@ -19,6 +19,7 @@
 	cam = commit -a -m
 	m = commit --amend --verbose
 
+	# track created/deleted files and commit all changes with a message
 	ac = "!git a . && git cam"
 
 	d = diff
