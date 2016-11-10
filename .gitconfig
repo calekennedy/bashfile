@@ -19,7 +19,7 @@
 	cam = commit -a -m
 	m = commit --amend --verbose
 
-	ac = "!git a . && git cam --verbose"
+	ac = "!git a . && git cam"
 
 	d = diff
 	ds = diff --stat
