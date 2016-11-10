@@ -29,6 +29,7 @@
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/local/bin/"
     export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+    export PATH="~/npm/bin:$PATH"
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
@@ -332,9 +333,14 @@ export NPM_TOKEN=$(echo -n `cat $HOME/.npmrc | grep _authToken | cut -d= -f2`)
 export NVM_DIR=~/.nvm
   . $(brew --prefix nvm)/nvm.sh
 
+### something for rbenv
+eval "$(rbenv init -)"
+
 ### Allows git [tab] [tab] autocomplete behavior
 ### $ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 ### Reference Url: http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
