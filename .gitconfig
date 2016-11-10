@@ -30,6 +30,8 @@
 	co = checkout
 	cob = checkout -b
 
+	pr = "!f() { URL=$(git remote get-url origin); git request-pull v1.0 echo $(git remote get-url origin) master:for-linus }; f"
+
 	# list branches sorted by last modified
 	b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 
