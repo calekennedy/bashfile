@@ -327,14 +327,14 @@ export ATOM_PATH="/Applications"
 export NODE_ENV="development"
 
 ### Allows npm authentication
-export NPM_TOKEN=$(echo -n `cat $HOME/.npmrc | grep _authToken | cut -d= -f2`)
+# export NPM_TOKEN=$(echo -n `cat $HOME/.npmrc | grep _authToken | cut -d= -f2`)
 
 ###
 export NVM_DIR=~/.nvm
   . $(brew --prefix nvm)/nvm.sh
 
 ### something for rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 ### Allows git [tab] [tab] autocomplete behavior
 ### $ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
@@ -343,4 +343,4 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
