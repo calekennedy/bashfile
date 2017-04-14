@@ -330,11 +330,12 @@ export NODE_ENV="development"
 export NPM_TOKEN=$(echo -n `cat $HOME/.npmrc | grep _authToken | cut -d= -f2`)
 
 ###
-export NVM_DIR=~/.nvm
-  . $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+export PATH=$PATH:$NVM_DIR
 
 ### something for rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 ### Allows git [tab] [tab] autocomplete behavior
 ### $ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
