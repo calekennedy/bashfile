@@ -327,7 +327,7 @@ export ATOM_PATH="/Applications"
 export NODE_ENV="development"
 
 ### Allows npm authentication
-export NPM_TOKEN=$(echo -n `cat $HOME/.npmrc | grep _authToken | cut -d= -f2`)
+# export NPM_TOKEN=$(echo -n `cat $HOME/.npmrc | grep _authToken | cut -d= -f2`)
 
 ###
 export NVM_DIR="$HOME/.nvm"
