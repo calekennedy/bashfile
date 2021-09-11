@@ -25,6 +25,7 @@ run the following.
   ln -s Projects/personal/bashfile/.bash_profile .bash_profile
   ln -s Projects/personal/bashfile/.gitconfig .gitconfig
   ln -s Projects/personal/bashfile/.git-completion.bash .git-completion.bash
+  ln -s Projects/personal/bashfile/.zshrc .zshrc
 ```
 
 ---
