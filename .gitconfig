@@ -1,0 +1,44 @@
+[user]
+	email = [address]@gmail.com
+	name = Cale Kennedy
+[merge]
+	tool = opendiff
+[color]
+	ui = auto
+[core]
+  # editor = 'atom' --wait
+[alias]
+	# one-line log
+	l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+	a = add
+	ap = add -p
+	c = commit --verbose
+	ca = commit -a --verbose
+	cm = commit -m
+	cam = commit -a -m
+	m = commit --amend --verbose
+
+	# track created/deleted files and commit all changes with a message
+	ac = "!git a . && git cam"
+
+	d = diff
+	ds = diff --stat
+	dc = diff --cached
+
+	s = status -s
+	co = checkout
+	cob = checkout -b
+
+	# list branches sorted by last modified
+	b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+	# create branches for all remotes, fetch them, then pull them
+	localize = "!f() { git checkout -B used-by-localization-script && git branch -r | grep -v 'HEAD' | while read remote; do BRANCH=${remote#origin/}; echo Creating/Resetting $BRANCH; git branch -f $BRANCH; echo Deleting local branch $remote; git branch -D $remote; done }; f && git checkout master && git branch -D used-by-localization-script && git fetch --all && git pull --all"
+
+	# list aliases
+	la = "!git config -l | grep alias | cut -c 7-"
+
+	# only keep the latest commit
+	start-fresh = "!f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A fresh start}\");};f"
+
